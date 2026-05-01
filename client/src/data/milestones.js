@@ -2,8 +2,7 @@ export const milestones = [
   {
     id: 1,
     title: 'Project Proposal',
-    date: 'February 2025',
-    marks: '6%',
+    date: 'September 2025',
     status: 'completed',
     description: 'Initial project proposal presentation covering research background, problem statement, objectives, and proposed methodology for the HEARME platform.',
     deliverables: [
@@ -16,8 +15,7 @@ export const milestones = [
   {
     id: 2,
     title: 'Progress Presentation 1',
-    date: 'May 2025',
-    marks: '6%',
+    date: 'December 2025',
     status: 'completed',
     description: 'First progress presentation demonstrating 50% completion of each module with working prototypes and preliminary evaluation results.',
     deliverables: [
@@ -30,9 +28,8 @@ export const milestones = [
   {
     id: 3,
     title: 'Progress Presentation 2',
-    date: 'September 2025',
-    marks: '12%',
-    status: 'in-progress',
+    date: 'March 2026',
+    status: 'completed',
     description: 'Second progress presentation showcasing 90% completion of implementation, testing results, and integration of all four modules.',
     deliverables: [
       'Full implementation of individual modules',
@@ -44,8 +41,7 @@ export const milestones = [
   {
     id: 4,
     title: 'Final Assessment',
-    date: 'October 2025',
-    marks: '12%',
+    date: 'May 2025',
     status: 'upcoming',
     description: 'Final project assessment with complete system demonstration, evaluation results, and project report submission.',
     deliverables: [
@@ -58,8 +54,7 @@ export const milestones = [
   {
     id: 5,
     title: 'Viva',
-    date: 'November 2025',
-    marks: '2%',
+    date: 'May 2025',
     status: 'upcoming',
     description: 'Final oral examination and defense of the research project before the evaluation panel.',
     deliverables: [

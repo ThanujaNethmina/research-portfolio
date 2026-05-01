@@ -6,33 +6,27 @@ import '../styles/presentations.css';
 const placeholderSlides = [
   {
     title: 'Proposal Presentation',
-    date: 'May 2025',
-    description: 'Initial project proposal covering research background, problem definition, objectives, and proposed methodology.',
+    date: 'September 2025',
+    description: 'Initial project proposal covering research background, problem definition, objectives, and proposed methodology for the HEARME platform.',
     category: 'proposal',
     type: 'PDF',
     downloadUrl: '/files/presentations/Proposal Presentation.pdf'
   },
   {
     title: 'Progress Presentation 1',
-    date: 'October 2025',
-    description: 'First progress presentation demonstrating 50% completion including literature review, system design, and initial prototypes.',
+    date: 'December 2025',
+    description: 'First progress presentation demonstrating 50% completion including literature review, system design, and initial working prototypes.',
     category: 'pp1',
     type: 'PDF',
     downloadUrl: '/files/presentations/Progress Presentation 1.pdf'
   },
   {
     title: 'Progress Presentation 2',
-    date: 'January 2026',
-    description: 'Second progress presentation showcasing 90% implementation, testing results, and integration progress.',
+    date: 'March 2026',
+    description: 'Second progress presentation showcasing 90% implementation, testing results, and integration of all four modules.',
     category: 'pp2',
     type: 'PDF',
-  },
-  {
-    title: 'Final Presentation',
-    date: 'May 2026',
-    description: 'Final project defense presentation with complete system demonstration, evaluation results, and research contributions.',
-    category: 'final',
-    type: 'PDF',
+    downloadUrl: '/files/presentations/Progress Presentation 2.pdf'
   },
 ];
 

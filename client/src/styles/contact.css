@@ -7,37 +7,198 @@
   position: relative;
 }
 .contact-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: var(--gradient-primary); opacity: 0.3; }
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: var(--space-6);
-  margin-top: var(--space-7);
-}
-.contact-form { display: grid; gap: var(--space-4); }
-.form-group { display: flex; flex-direction: column; gap: var(--space-2); }
-.form-group label { font-size: var(--text-sm); font-weight: 600; color: var(--text-secondary); }
-.form-group input, .form-group textarea {
-  padding: var(--space-3) var(--space-4);
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
+
+/* Section Headers */
+.contact-section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
   color: var(--text-primary);
+}
+.contact-section-header h2 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin: 0;
+}
+.contact-section-header svg {
+  color: var(--accent-teal);
+}
+
+/* ======== Supervisor Card ======== */
+.supervisor-card {
+  padding: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+.supervisor-card-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+.supervisor-avatar {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+.supervisor-info h3 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+.supervisor-role {
   font-size: var(--text-sm);
-  transition: border-color var(--transition-fast);
+  color: var(--accent-teal);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
 }
-.form-group input:focus, .form-group textarea:focus {
-  border-color: var(--accent-teal);
-  box-shadow: 0 0 0 3px rgba(0,212,170,0.1);
+.supervisor-dept {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  margin-bottom: 2px;
 }
-.form-group textarea { resize: vertical; min-height: 140px; }
-.form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
-.contact-info-cards { display: grid; gap: var(--space-4); }
-.contact-info-card {
-  display: flex; align-items: flex-start; gap: var(--space-4);
+.supervisor-uni {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--space-3);
+}
+
+/* ======== Member Avatar ======== */
+.member-avatar-wrapper {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(0, 212, 170, 0.3);
+  flex-shrink: 0;
+  position: relative;
+  background: var(--bg-tertiary);
+}
+.member-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.member-avatar-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--accent-teal);
+  background: rgba(0, 212, 170, 0.1);
+}
+
+/* ======== Members Grid ======== */
+.contact-members-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+/* ======== Member Card ======== */
+.member-contact-card {
   padding: var(--space-5);
-  background: var(--bg-glass);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  animation: fadeInUp 0.5s ease both;
+}
+.member-contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+.member-card-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.member-card-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.member-card-identity h3 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+.member-sid {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.5px;
+}
+.member-role-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-teal);
+  background: rgba(0, 212, 170, 0.1);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  width: fit-content;
+  line-height: 1.4;
+}
+.member-card-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ======== Contact Details ======== */
+.member-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-glass);
+}
+.member-contact-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  padding: var(--space-1) 0;
+}
+.member-contact-link:hover {
+  color: var(--accent-teal);
+}
+.member-contact-link svg {
+  color: var(--accent-teal);
+  flex-shrink: 0;
+}
+
+/* ======== Location Card ======== */
+.location-card {
+  padding: var(--space-5);
+}
+.location-card-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+.location-card h4 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+.location-card p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.location-sub {
+  margin-top: var(--space-1);
+  color: var(--text-muted) !important;
+  font-size: var(--text-xs) !important;
 }
 .contact-info-icon {
   width: 48px; height: 48px;
@@ -47,16 +208,32 @@
   color: var(--accent-teal);
   flex-shrink: 0;
 }
-.contact-info-card h4 { font-size: var(--text-sm); margin-bottom: var(--space-1); }
-.contact-info-card p { font-size: var(--text-sm); color: var(--text-secondary); line-height: 1.6; }
-.form-success {
-  padding: var(--space-5);
-  background: rgba(0,212,170,0.08);
-  border: 1px solid rgba(0,212,170,0.2);
-  border-radius: var(--radius-md);
-  text-align: center;
-  color: var(--accent-teal);
+
+/* ======== Animation ======== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* ======== Responsive ======== */
 @media (max-width: 768px) {
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-members-grid {
+    grid-template-columns: 1fr;
+  }
+  .supervisor-card-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .supervisor-avatar {
+    margin: 0 auto;
+  }
+  .member-contact-link span {
+    font-size: var(--text-xs);
+  }
 }
