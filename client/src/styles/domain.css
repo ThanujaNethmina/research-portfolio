@@ -1,0 +1,268 @@
+/* ============================================
+   Domain Page Styles
+   ============================================ */
+
+.domain-hero {
+  padding-top: calc(var(--navbar-height) + var(--space-8));
+  padding-bottom: var(--space-8);
+  background: var(--gradient-hero);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.domain-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-primary);
+  opacity: 0.3;
+}
+
+/* Literature Review */
+.lit-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.lit-card {
+  padding: var(--space-6);
+}
+
+.lit-card-number {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-3);
+}
+
+.lit-card h4 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-3);
+}
+
+.lit-card p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Research Gap / Problem */
+.research-highlight {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: var(--space-7);
+  position: relative;
+  overflow: hidden;
+}
+
+.research-highlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gradient-primary);
+  border-radius: 4px 0 0 4px;
+}
+
+.research-highlight h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.research-highlight p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: var(--text-base);
+}
+
+/* Objectives */
+.objectives-list {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.objective-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.objective-item:hover {
+  border-color: var(--border-hover);
+  transform: translateX(4px);
+}
+
+.objective-number {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--bg-primary);
+  flex-shrink: 0;
+}
+
+.objective-text {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.objective-text strong {
+  color: var(--text-primary);
+}
+
+/* Methodology Timeline */
+.methodology-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-top: var(--space-6);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+}
+
+.method-step {
+  flex: 1;
+  min-width: 180px;
+  padding: var(--space-5);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  text-align: center;
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.method-step:first-child {
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+.method-step:last-child {
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.method-step:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-hover);
+  z-index: 1;
+}
+
+.method-step-num {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-2);
+}
+
+.method-step h4 {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-2);
+}
+
+.method-step p {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Technologies */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.tech-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-3);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+.tech-badge:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow-teal);
+}
+
+.tech-badge-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 212, 170, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.tech-badge span {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.domain-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .lit-review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .methodology-flow {
+    flex-direction: column;
+  }
+
+  .method-step {
+    border-radius: var(--radius-md) !important;
+    min-width: auto;
+  }
+
+  .domain-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
